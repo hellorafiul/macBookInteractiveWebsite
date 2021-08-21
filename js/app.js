@@ -102,4 +102,5 @@ document.getElementById('basic-addon2').addEventListener('click', function () {
     const afterPomoApply = finalTotal - applyPomo;
     document.getElementById('final-total').innerText = afterPomoApply;
   }
+  document.getElementById('pomo-input').value = '';
 })
