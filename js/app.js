@@ -38,7 +38,6 @@ function updateStorageCost(isStorage) {
   } else if (isStorage == 'ssd-1tb') {
     ssdInputCost.innerText = ssd1TB;
   }
-
 };
 
 //Extra Storage Cost
