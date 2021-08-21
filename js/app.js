@@ -90,5 +90,17 @@ const fixedTotalPrice = document.getElementById('total-price');
 function updateTotal() {
   const totalPrice = parseInt(memory.innerText) + parseInt(ssd.innerText) + parseInt(shipping.innerText) + parseInt(bestPrice.innerText);
   fixedTotalPrice.innerText = totalPrice;
-  console.log(totalPrice);
+  document.getElementById('final-total').innerText = totalPrice;
 }
+
+// Add Pomo code
+
+document.getElementById('basic-addon2').addEventListener('click', function () {
+  const finalTotal = document.getElementById('total-price').innerText;
+  const pomoInput = document.getElementById('pomo-input').value;
+  if (pomoInput == 'stevekaku') {
+    const applyPomo = finalTotal * .20;
+    const afterPomoApply = finalTotal - applyPomo;
+    document.getElementById('final-total').innerText = afterPomoApply;
+  }
+})

@@ -66,7 +66,7 @@
             <h5>Memory</h5>
             <div>
               <button id="8bg-memory" class="btn btn-outline-secondary me-2 mt-2">8GB unified memory</button>
-              <button id="16gb-memory" class="btn btn-outline-secondary me-2 mt-2">16GB unified memory $180</button>
+              <button id="16gb-memory" class="btn btn-outline-secondary me-2 mt-2">16GB unified memory</button>
             </div>
           </div>
           <!-- Storage Section     -->
@@ -74,8 +74,8 @@
             <h5>Storage</h5>
             <div>
               <button id="ssd-256" class="btn btn-outline-secondary me-2 mt-2">256GB SSD storage</button>
-              <button id="ssd-512" class="btn btn-outline-secondary me-2 mt-2">512GB SSD storage $100</button>
-              <button id="ssd-1tb" class="btn btn-outline-secondary me-2 mt-2">1TB SSD storage $180</button>
+              <button id="ssd-512" class="btn btn-outline-secondary me-2 mt-2">512GB SSD storage</button>
+              <button id="ssd-1tb" class="btn btn-outline-secondary me-2 mt-2">1TB SSD storage</button>
             </div>
           </div>
           <!-- Delivery Section     -->
@@ -85,8 +85,7 @@
               <button id="free-delivery" class="btn btn-outline-secondary me-2 mt-2">Friday, Aug 25 FREE Prime
                 Delivery</button>
               <button id="delivery-cost" class="btn btn-outline-secondary me-2 mt-2">Friday, Aug 21 Delivery
-                charge
-                $20</button>
+                charge</button>
             </div>
           </div>
           <!-- Price Calculation Section -->
@@ -119,11 +118,11 @@
               </div>
               <!-- Add Pomo code -->
               <div class="justify-content-between ps-2 pe-5 pt-3">
-                <p class="lead">Add Pomo code</p>
+                <p class="lead">Add Pomo <span class="text-danger fw-bold">Save 20%</span></p>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Save 20%" aria-label="Recipient's username"
-                    aria-describedby="basic-addon2">
-                  <span class="input-group-text bg-danger text-white" id="basic-addon2">Apply</span>
+                  <input id="pomo-input" type="text" class="form-control" placeholder="Your Pomo"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <span class="input-group-text bg-danger text-white hover" id="basic-addon2">Apply</span>
                 </div>
               </div>
             </div>
@@ -134,7 +133,7 @@
       <!-- Final Totoal Area -->
       <hr>
       <div class="d-flex justify-content-center">
-        <h1>Total: $<span>1299</span></h1>
+        <h1>Total: $<span id="final-total">1299</span></h1>
       </div>
     </div>
   </main>
