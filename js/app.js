@@ -16,9 +16,11 @@ function updateMemoryCost(ismemory) {
 //Extra Memory Cost
 document.getElementById('8bg-memory').addEventListener('click', function () {
   updateMemoryCost(false);
+  updateTotal()
 });
 document.getElementById('16gb-memory').addEventListener('click', function () {
   updateMemoryCost(true);
+  updateTotal()
 });
 
 
@@ -43,12 +45,15 @@ function updateStorageCost(isStorage) {
 
 document.getElementById('ssd-256').addEventListener('click', function () {
   updateStorageCost('ssd-256')
+  updateTotal()
 })
 document.getElementById('ssd-512').addEventListener('click', function () {
   updateStorageCost('ssd-512')
+  updateTotal()
 })
 document.getElementById('ssd-1tb').addEventListener('click', function () {
   updateStorageCost('ssd-1tb')
+  updateTotal()
 })
 
 //Update Delivery charge Function
@@ -67,8 +72,23 @@ function updateDeliveryCost(isDelivery) {
 //Delivery charge
 document.getElementById('free-delivery').addEventListener('click', function () {
   updateDeliveryCost(true)
+  updateTotal()
 })
 document.getElementById('delivery-cost').addEventListener('click', function () {
   updateDeliveryCost(false)
+  updateTotal()
 })
 
+// Update Total price
+const memory = document.getElementById('extra-memory-cost');
+const ssd = document.getElementById('extra-storage-cost');
+const shipping = document.getElementById('extra-delivery-cost');
+const bestPrice = document.getElementById('best-price');
+const fixedTotalPrice = document.getElementById('total-price');
+
+// Update Total price Function
+function updateTotal() {
+  const totalPrice = parseInt(memory.innerText) + parseInt(ssd.innerText) + parseInt(shipping.innerText) + parseInt(bestPrice.innerText);
+  fixedTotalPrice.innerText = totalPrice;
+  console.log(totalPrice);
+}
